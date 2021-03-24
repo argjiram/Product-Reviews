@@ -1,0 +1,6 @@
+framework module Pods_Product_Reviews_Product_ReviewsUITests {
+  umbrella header "Pods-Product-Reviews-Product-ReviewsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

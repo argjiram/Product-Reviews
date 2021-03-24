@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="ProductTableViewCell" customModule="Product_Reviews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adidas-logo" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-sK-Cfu">
+                        <rect key="frame" x="8" y="25" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="JeU-ub-nxu"/>
+                            <constraint firstAttribute="height" constant="200" id="KiX-nW-wCs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENw-v6-9wJ">
+                        <rect key="frame" x="228" y="60" width="157" height="19.5"/>
+                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="18"/>
+                        <color key="textColor" red="0.10115171392976136" green="0.10126025350737339" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DescriptionDescriptionDescriptionDescriptionDescriptionDescription" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9Q-i7-cJb">
+                        <rect key="frame" x="228" y="95.5" width="157" height="45"/>
+                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                        <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDx-n5-oV8">
+                        <rect key="frame" x="244" y="177" width="141" height="26"/>
+                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
+                        <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tY3-fR-V8a">
+                        <rect key="frame" x="98" y="115" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="t9Q-i7-cJb" firstAttribute="top" secondItem="ENw-v6-9wJ" secondAttribute="bottom" constant="16" id="4eV-JA-BIE"/>
+                    <constraint firstItem="s2k-sK-Cfu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7bU-UE-RFo"/>
+                    <constraint firstItem="ENw-v6-9wJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="Fo1-3r-fHf"/>
+                    <constraint firstItem="s2k-sK-Cfu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MtB-dG-Wof"/>
+                    <constraint firstItem="t9Q-i7-cJb" firstAttribute="leading" secondItem="ENw-v6-9wJ" secondAttribute="leading" id="O5d-wY-KKg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RDx-n5-oV8" secondAttribute="bottom" constant="36" id="TkE-aw-aqx"/>
+                    <constraint firstItem="RDx-n5-oV8" firstAttribute="leading" secondItem="s2k-sK-Cfu" secondAttribute="trailing" constant="36" id="WWv-cr-4Of"/>
+                    <constraint firstItem="ENw-v6-9wJ" firstAttribute="leading" secondItem="s2k-sK-Cfu" secondAttribute="trailing" constant="20" id="Y9z-bf-iO3"/>
+                    <constraint firstAttribute="trailing" secondItem="ENw-v6-9wJ" secondAttribute="trailing" constant="36" id="kmK-aO-RbN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RDx-n5-oV8" secondAttribute="trailing" constant="16" id="m9s-zX-x6X"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="t9Q-i7-cJb" secondAttribute="trailing" constant="16" id="vxW-Fg-Cim"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="loader" destination="tY3-fR-V8a" id="kwX-xZ-u21"/>
+                <outlet property="productDescriptionLabel" destination="t9Q-i7-cJb" id="g1e-Vx-jWp"/>
+                <outlet property="productImage" destination="s2k-sK-Cfu" id="0Vo-EM-jJF"/>
+                <outlet property="productNameLabel" destination="ENw-v6-9wJ" id="o0U-s1-pu2"/>
+                <outlet property="productPriceLabel" destination="RDx-n5-oV8" id="Hwu-mM-Kfk"/>
+            </connections>
+            <point key="canvasLocation" x="210.86956521739131" y="178.125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="adidas-logo" width="86.5" height="86.5"/>
+    </resources>
+</document>
