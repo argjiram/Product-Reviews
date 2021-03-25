@@ -24,6 +24,10 @@ struct Review: Codable {
     let text: String
 }
 
+struct ProductDetailsRequestParameter: Codable {
+    let id: String
+}
+
 enum Rating: Int {
     case one
     case two

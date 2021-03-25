@@ -15,7 +15,7 @@ class ProductListViewController: UIViewController {
     
     
     let viewModel = ProductListViewModel(service: ProductService())
-    weak var timer: Timer?
+    
     var checkString: String = ""
     var isSearching: Bool = false
     
@@ -44,7 +44,7 @@ class ProductListViewController: UIViewController {
         self.tableView.register(noDataView, forCellReuseIdentifier: "NoDataTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight  = 250
+        tableView.rowHeight  = 220
     }
     
     func setupSearchBar(){
@@ -72,10 +72,6 @@ class ProductListViewController: UIViewController {
                 self.view.makeToast(self.viewModel.message, duration: 1.0, position: .bottom)
             }
         }
-    }
-    
-    func stopTimer() {
-        timer?.invalidate()
     }
 }
 
@@ -122,14 +118,14 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
             if isSearching {
                 if let productModel = viewModel.getSearchedProduct(forRow: indexPath.row) {
                     if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController {
-                        viewController.productModel = productModel
+                        viewController.productID = productModel.id
                         self.navigationController?.pushViewController(viewController, animated: true)
                     }
                 }
             }else {
                 if let productModel = viewModel.getProduct(forRow: indexPath.row) {
                     if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController {
-                        viewController.productModel = productModel
+                        viewController.productID = productModel.id
                         self.navigationController?.pushViewController(viewController, animated: true)
                     }
                 }
@@ -148,14 +144,8 @@ extension ProductListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
             isSearching = true
-            timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                if searchText == self.checkString {
-                    self.stopTimer()
-                }
                 self.viewModel.returnSearchedProduct(key: searchText)
                 self.tableView.reloadData()
-            }
         } else if searchText == "" {
             clearSearchView()
         }
@@ -163,7 +153,6 @@ extension ProductListViewController: UISearchBarDelegate {
     }
     
     func clearSearchView(){
-        stopTimer()
         isSearching = false
         viewModel.clearSearchedArray()
         tableView.reloadData()

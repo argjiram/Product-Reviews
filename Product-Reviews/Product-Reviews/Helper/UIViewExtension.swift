@@ -53,4 +53,12 @@ import UIKit
         maskLayer.path = path.cgPath
         viewToRound.layer.mask = maskLayer
     }
+    
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor? = .clear, borderWidth: CGFloat = 0.0) {
+         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+         let mask = CAShapeLayer()
+         mask.path = path.cgPath
+         layer.mask = mask
+     }
 }

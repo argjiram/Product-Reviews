@@ -46,10 +46,7 @@ final class HttpClient: HttpClientProtocol {
     
     private let baseUrl: String
     private let urlSession: URLSessionProtocol
-    convenience init() {
-        self.init(baseUrl: Constants.BASE_URL, urlSession: URLSession.shared)
-    }
-    
+
     init(baseUrl: String, urlSession: URLSessionProtocol) {
         
         self.baseUrl    = baseUrl
@@ -86,15 +83,9 @@ final class HttpClient: HttpClientProtocol {
                         return
                     }
                     do {
-                        if statusCode == 200 {
-                            let returnValue = try JSONDecoder().decode(returnType, from: responseData)
-                            print(returnValue)
-                            onCompletion(.successful(returnValue), statusCode)
-                        } else {
-                            let returnValue = try JSONDecoder().decode(ErrorMessage.self, from: responseData)
-                            print(returnValue)
-                            onCompletion(.failed(.MSG(msg: returnValue.message)), statusCode)
-                        }
+                        let returnValue = try JSONDecoder().decode(returnType, from: responseData)
+                        print(returnValue)
+                        onCompletion(.successful(returnValue), statusCode)
                         
                     }
                     catch (let error){
