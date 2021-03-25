@@ -10,11 +10,12 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var productImage: UIImageView! {
+    @IBOutlet weak var headerView: UIView! {
         didSet {
-            self.productImage.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 16)
+            self.headerView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 16)
         }
     }
+    @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!

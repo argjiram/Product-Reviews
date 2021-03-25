@@ -126,46 +126,56 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-t6-25s">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="300"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GJ-T2-wiV">
+                                            <rect key="frame" x="16" y="0.0" width="398" height="421"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-t6-25s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="Hr4-Wz-2AW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84k-SC-D0l">
+                                                    <rect key="frame" x="331.5" y="310" width="30.5" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
+                                                    <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-DW-4YG">
+                                                    <rect key="frame" x="16" y="310" width="299.5" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
+                                                    <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product NameProduct NameProduct NameProduct " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-4D-m30">
+                                                    <rect key="frame" x="16" y="346" width="346" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                                    <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.92561131720000001" green="0.93316656350000005" blue="0.94117838139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="300" id="Hr4-Wz-2AW"/>
+                                                <constraint firstAttribute="trailing" secondItem="bU5-4D-m30" secondAttribute="trailing" constant="36" id="40g-2O-b6v"/>
+                                                <constraint firstItem="84k-SC-D0l" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UMb-DW-4YG" secondAttribute="trailing" constant="16" id="9N8-dT-SeD"/>
+                                                <constraint firstItem="UMb-DW-4YG" firstAttribute="leading" secondItem="4GJ-T2-wiV" secondAttribute="leading" constant="16" id="B6W-5A-YC9"/>
+                                                <constraint firstAttribute="trailing" secondItem="84k-SC-D0l" secondAttribute="trailing" constant="36" id="Bvr-Ou-4ua"/>
+                                                <constraint firstItem="84k-SC-D0l" firstAttribute="top" secondItem="kIQ-t6-25s" secondAttribute="bottom" constant="10" id="TLK-Tp-aHs"/>
+                                                <constraint firstItem="UMb-DW-4YG" firstAttribute="top" secondItem="kIQ-t6-25s" secondAttribute="bottom" constant="10" id="TiQ-IA-JwO"/>
+                                                <constraint firstItem="kIQ-t6-25s" firstAttribute="top" secondItem="4GJ-T2-wiV" secondAttribute="top" id="Wm3-eX-JUK"/>
+                                                <constraint firstAttribute="trailing" secondItem="kIQ-t6-25s" secondAttribute="trailing" id="gpq-YQ-uXs"/>
+                                                <constraint firstItem="bU5-4D-m30" firstAttribute="leading" secondItem="4GJ-T2-wiV" secondAttribute="leading" constant="16" id="kXY-0k-lRo"/>
+                                                <constraint firstAttribute="left" secondItem="kIQ-t6-25s" secondAttribute="left" id="ou3-1x-3Ve"/>
+                                                <constraint firstItem="bU5-4D-m30" firstAttribute="top" secondItem="84k-SC-D0l" secondAttribute="bottom" constant="10" id="yF6-cJ-blX"/>
                                             </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-DW-4YG">
-                                            <rect key="frame" x="16" y="320" width="335.5" height="26"/>
-                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
-                                            <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84k-SC-D0l">
-                                            <rect key="frame" x="367.5" y="320" width="30.5" height="26"/>
-                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
-                                            <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product NameProduct NameProduct NameProduct " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-4D-m30">
-                                            <rect key="frame" x="16" y="362" width="382" height="38.5"/>
-                                            <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
-                                            <color key="textColor" red="0.1011517139" green="0.10126025349999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="UMb-DW-4YG" firstAttribute="leading" secondItem="hur-uV-I3I" secondAttribute="leading" constant="16" id="0ou-xW-2C2"/>
-                                        <constraint firstAttribute="trailing" secondItem="kIQ-t6-25s" secondAttribute="trailing" constant="-16" id="DGH-ry-aaX"/>
-                                        <constraint firstItem="bU5-4D-m30" firstAttribute="top" secondItem="84k-SC-D0l" secondAttribute="bottom" constant="16" id="H0j-2X-VEP"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bU5-4D-m30" secondAttribute="bottom" constant="20" symbolic="YES" id="O6P-rA-Le9"/>
-                                        <constraint firstAttribute="trailing" secondItem="84k-SC-D0l" secondAttribute="trailing" constant="16" id="Unu-Qh-O70"/>
-                                        <constraint firstItem="kIQ-t6-25s" firstAttribute="top" secondItem="hur-uV-I3I" secondAttribute="top" id="WcD-bL-h2Z"/>
-                                        <constraint firstItem="84k-SC-D0l" firstAttribute="top" secondItem="kIQ-t6-25s" secondAttribute="bottom" constant="20" id="XpW-k5-xNm"/>
-                                        <constraint firstItem="UMb-DW-4YG" firstAttribute="top" secondItem="kIQ-t6-25s" secondAttribute="bottom" constant="20" id="dIk-Ta-fRf"/>
-                                        <constraint firstItem="bU5-4D-m30" firstAttribute="leading" secondItem="hur-uV-I3I" secondAttribute="leading" constant="16" id="f8B-7H-z8M"/>
-                                        <constraint firstAttribute="trailing" secondItem="bU5-4D-m30" secondAttribute="trailing" constant="16" id="jP8-Xa-tgC"/>
-                                        <constraint firstItem="bU5-4D-m30" firstAttribute="top" secondItem="UMb-DW-4YG" secondAttribute="bottom" constant="16" id="jzW-Sr-etf"/>
-                                        <constraint firstItem="84k-SC-D0l" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UMb-DW-4YG" secondAttribute="trailing" constant="16" id="m9m-f0-rGf"/>
-                                        <constraint firstItem="kIQ-t6-25s" firstAttribute="leading" secondItem="hur-uV-I3I" secondAttribute="leading" id="uUb-1y-v6s"/>
+                                        <constraint firstAttribute="trailing" secondItem="4GJ-T2-wiV" secondAttribute="trailing" id="CXh-0X-ql5"/>
+                                        <constraint firstAttribute="bottom" secondItem="4GJ-T2-wiV" secondAttribute="bottom" id="GRx-O6-VFa"/>
+                                        <constraint firstItem="4GJ-T2-wiV" firstAttribute="top" secondItem="hur-uV-I3I" secondAttribute="top" id="a6M-fu-DzI"/>
+                                        <constraint firstItem="4GJ-T2-wiV" firstAttribute="leading" secondItem="hur-uV-I3I" secondAttribute="leading" constant="16" id="g1W-N9-78X"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -311,6 +321,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="4GJ-T2-wiV" id="fBd-KI-7N6"/>
                         <outlet property="popView" destination="CbU-Fz-Yws" id="Juy-QC-Aw1"/>
                         <outlet property="productDescriptionLabel" destination="bU5-4D-m30" id="SMn-g3-EEs"/>
                         <outlet property="productImage" destination="kIQ-t6-25s" id="vWZ-zc-Kec"/>
@@ -521,9 +532,6 @@
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

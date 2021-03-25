@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "adidas-logo.jpg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "adidas-logo@2x.jpg",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "adidas-logo@3x.jpg",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "logo.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

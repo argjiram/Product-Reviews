@@ -18,7 +18,7 @@ class GifViewController: UIViewController {
     }
     
     func setupGif(){
-        let logoGif = UIImage.gifImageWithName("logo")
+        let logoGif = UIImage.gifImageWithName("gif")
         gifImageView.image = logoGif
     }
     
